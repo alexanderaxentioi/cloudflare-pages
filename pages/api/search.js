@@ -1,4 +1,4 @@
-import pokemon from "../../pokemon.json";
+import pokemon from "https://alexanderaxentioi.github.io/pokemon-api/pokemon.json";
 
 export default (req, res) => {
   const filter = req.query.q ? new RegExp(req.query.q, "i") : /.*/;
