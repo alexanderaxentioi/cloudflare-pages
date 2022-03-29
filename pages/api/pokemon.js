@@ -1,5 +1,5 @@
 export default (req, res) => {
-  const pokemon = await axios.get("https://alexanderaxentioi.github.io/pokemon-api/data/pokemon.json").then(({ data }) => data.filter(({ name: { english } }) => filter.test(english)));
+  const pokemon = axios.get("https://alexanderaxentioi.github.io/pokemon-api/data/pokemon.json").then(({ data }) => data.filter(({ name: { english } }) => filter.test(english)));
   if (!req.query.name) {
     res.statusCode = 400;
     res.end("Must have a name");
